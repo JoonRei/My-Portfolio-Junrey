@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Junrey's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    .typed-cursor {
+      display: none !important;
+    }
+    .typed-fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+  </style>
+  
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"><i class="fas fa-spinner fa-spin"></i></div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="glass-card" data-aos="fade-up">
+      <h1>PORTFOLIO</h1>
+      <p>I’m <span class="highlight">Junrey Manriquez</span>, a creative developer & designer.</p>
+      <button onclick="scrollToSection()">✨ Explore</button>
+    </div>
+  </section>
+
+<!-- About Section -->
+<section id="about" data-aos="fade-up">
+    <div class="about-wrapper glass-combined">
+      
+      <!-- Profile Image & Details -->
+      <div class="about-header">
+        <img src="pfpic.jpg" alt="Junrey Manriquez" class="about-pic" />
+        <div class="about-intro">
+          <h2>Hi, I'm Junrey Manriquez</h2>
+          <p>
+            I'm a graphic designer who enjoys creating clean, modern visuals that communicate clearly. I focus on designs that are not only visually appealing but also meaningful and engaging. 
+            Whether it's for web, social media, or print, I love turning ideas into designs that leave a lasting impression.
+          </p>
+          <!-- Divider inside about-intro -->
+          <hr class="about-divider" />
+        </div>
+      </div>
+
+      
+
+      <!-- New Container for Personal Details, Skills, and Education -->
+      <div class="about-details-wrapper">
+        <!-- Personal Details -->
+        <div class="about-details">
+          <h3>Personal Details</h3>
+          <ul>
+            <li><strong>Age:</strong> 22 years old</li>
+            <li><strong>Birthdate:</strong> March 17, 2003</li>
+            <li><strong>Address:</strong> Davao City</li>
+            <li><strong>Phone:</strong> +639854295085</li>
+            <li><strong>Email:</strong> junreymanriquezz@gmail.com</li>
+          </ul>
+        </div>
+        
+        <!-- Skills Section -->
+        <div class="about-skills">
+          <h3 class="skills-header">Skills</h3>
+          <div class="skills-icons">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" title="Photoshop" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" title="Canva" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" title="Figma" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
+          </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="about-education">
+            <h3 class="education-header">Education</h3>
+          
+            <!-- Education Card 1 -->
+            <div class="education-card">
+              <img src="jmclogo.png" alt="School Logo" class="school-logo" />
+              <div class="education-details">
+                <span class="school-name">Jose Maria College Foundation Inc.</span>
+                <p class="degree">Bachelor of Science in Information Technology</p>
+                <p class="grad-year">2021-Present</p>
+              </div>
+            </div>
+      </div>
+
+    </div>
+</section>
+
+
+  <!-- Projects Section -->
+  <section id="projects" data-aos="fade-up">
+    <div class="projects-header">
+      <h2 data-aos="fade-up">My Projects</h2>
+      <button class="glass-button" data-aos="fade-left" data-aos-delay="100" onclick="openProjectModal()">See All</button>
+    </div>
+    <div class="project-grid">
+      <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="0">
+        <img src="images/1.png" alt="Design 1"/>
+        <h3>Introduction to UI Design</h3>
+        <p>Pubmats</p>
+      </div>
+      <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/9.png" alt="Design 2"/>
+        <h3>National Costume</h3>
+        <p>Pubmats</p>
+      </div>
+      <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="200">
+        <img src="images/64.png" alt="Design 3"/>
+        <h3>Kabantog Intamurals</h3>
+        <p>Pubmats</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeProjectModal()">&times;</span>
+      <h2>All Projects</h2>
+      <div class="all-projects-grid">
+        <div class="project-card tilt" data-aos="zoom-in">
+          <img src="images/1.png" alt="Design 1"/>
+          <h3>Introduction to UI Design</h3>
+          <p>Pubmats</p>
+        </div>
+        <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="100">
+          <img src="images/9.png" alt="Design 2"/>
+          <h3>Nationa Costume</h3>
+          <p>Pubmats</p>
+        </div>
+        <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="200">
+          <img src="images/64.png" alt="Design 3"/>
+          <h3>Kabantog Intamurals</h3>
+          <p>Pubmats</p>
+        </div>
+        <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="300">
+          <img src="images/2.png" alt="Design 4"/>
+          <h3>Pubmats</h3>
+          <p></p>
+        </div>
+        <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="400">
+          <img src="images/3.png" alt="Design 5"/>
+          <h3>Pubmats</h3>
+          <p></p>
+        </div>
+        <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="400">
+            <img src="images/4.png" alt="Design 5"/>
+            <h3>Pubmats</h3>
+            <p></p>
+          </div>
+          <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="400">
+            <img src="images/5.png" alt="Design 5"/>
+            <h3>Pubmats</h3>
+            <p></p>
+          </div>
+          <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="400">
+            <img src="images/6.png" alt="Design 5"/>
+            <h3>Pubmats</h3>
+            <p></p>
+          </div>
+          <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="400">
+            <img src="images/7.png" alt="Design 5"/>
+            <h3>Pubmats</h3>
+            <p></p>
+          </div>
+          <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="400">
+            <img src="images/8.png" alt="Design 5"/>
+            <h3>Pubmats</h3>
+            <p></p>
+          </div>
+          <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="400">
+            <img src="images/10.png" alt="Design 5"/>
+            <h3>Pubmats</h3>
+            <p></p>
+          </div>
+          <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="400">
+            <img src="images/63.png" alt="Design 5"/>
+            <h3>Pubmats</h3>
+            <p></p>
+          </div>
+          <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="400">
+            <img src="images/70.png" alt="Design 5"/>
+            <h3>Pubmats</h3>
+            <p></p>
+          </div>
+          <div class="project-card tilt" data-aos="zoom-in" data-aos-delay="400">
+            <img src="images/MISS UNIVERSE.png" alt="Design 5"/>
+            <h3>Pubmats</h3>
+            <p></p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+<section id="contact">
+    <div class="section-glass" data-aos="zoom-in">
+      <h2 class="contact-title" id="typed-contact"></h2>
+  
+      <!-- Optional Contact Icons -->
+      <div class="contact-info-icons">
+        <a href="mailto:junreymanriquezz@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+639854295085" title="Call"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://www.facebook.com/junrey.manriquez.37" title="Messenger" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+      </div>
+  
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" id="sendBtn">
+          <span class="btn-text">Send Message</span>
+          <span class="spinner" style="display: none;"></span>
+        </button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <script>
+    // Typing Animation
+    new Typed("#typed-contact", {
+  strings: ["Let's Connect.", "Send Me a Message.", "Say Hello!"],
+  typeSpeed: 60,
+  backSpeed: 30,
+  backDelay: 1200,
+  loop: true,
+  fadeOut: true,         // Add this line
+  fadeOutClass: 'typed-fade-out',
+  fadeOutDelay: 500      // Optional, to slow down the fade
+});
+
+  
+    // Form Submit Feedback
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const btnText = document.querySelector(".btn-text");
+      const spinner = document.querySelector(".spinner");
+  
+      btnText.style.display = "none";
+      spinner.style.display = "inline-block";
+  
+      setTimeout(() => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent!',
+          text: 'Thanks for reaching out!',
+          timer: 2000,
+          showConfirmButton: false
+        });
+        btnText.style.display = "inline";
+        spinner.style.display = "none";
+        this.reset();
+      }, 1800);
+    });
+  </script>
+  
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+    VanillaTilt.init(document.querySelectorAll('.tilt'), {
+      max: 15,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2
+    });
+
+    function scrollToSection() {
+      document.getElementById('next-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function openProjectModal() {
+      document.getElementById('projectModal').style.display = 'block';
+    }
+
+    function closeProjectModal() {
+      document.getElementById('projectModal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
